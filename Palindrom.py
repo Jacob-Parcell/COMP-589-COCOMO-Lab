@@ -42,10 +42,15 @@ def handleUserInput(userInput):
         case _:
             print("Invalid Input, Please Try Again")
 
-def getUserInput():
-    while game:
-        printMenu()
-        userInput = input("Make A Selection: ") 
-        handleUserInput(userInput)
+game = True
+score = 0
 
-getUserInput()
+def getUserInput():
+    printMenu()
+    userInput = input("Make A Selection: ") 
+    handleUserInput(userInput)
+    
+while game:
+    getUserInput()
+
+
