@@ -43,10 +43,12 @@ def handleUserInput(userInput):
 game = True
 score = 0
 
+def getUserInput():
+    printMenu()
+    userInput = input("Make A Selection: ") 
+    handleUserInput(userInput)
+    
 while game:
-    def getUserInput():
-        printMenu()
-        userInput = input("Make A Selection: ") 
-        handleUserInput(userInput)
+    getUserInput()
 
-getUserInput()
+
