@@ -1,5 +1,3 @@
-game = True
-score = 0
 leaderboard = {
     "Jason" : 1,
     "Jacob" : 5,
