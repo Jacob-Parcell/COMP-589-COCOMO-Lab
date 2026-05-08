@@ -13,3 +13,10 @@ if is_palindrome:
     print("Yes") 
 else:
     print("No")
+
+
+def printMenu():
+    print("Welcome to Palindrome")
+    print("1. Play")
+    print("2. See Leaderboard")
+    print("3. Exit")
