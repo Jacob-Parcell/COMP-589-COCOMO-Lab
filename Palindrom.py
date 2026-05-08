@@ -32,7 +32,7 @@ def printMenu():
     print("2. See Leaderboard")
     print("3. Exit")
 
-def handleUserInput(userInput):
+def handleUserInput(userInput, username):
     match userInput:
         case "1":
             playGame(score)
@@ -41,19 +41,23 @@ def handleUserInput(userInput):
             printLeaderboard()
             return True
         case "3":
-            print("Thanks for playing!, score: " + str(score))
+            print("Thanks for playing, " + username + "!, score: " + str(score))
             return False
         case _:
             print("Invalid Input, Please Try Again")
             return True
         
 
-def getUserInput():
+def getUserInput(username):
     printMenu()
     userInput = input("Make A Selection: ") 
-    return handleUserInput(userInput)
+    return handleUserInput(userInput, username)
 
+username = input("Enter Your Username: ")
 while game:
-    game = getUserInput()
+    game = getUserInput(username)
 
+leaderboard[username] = score
+
+printLeaderboard()
 
