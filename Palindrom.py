@@ -17,6 +17,7 @@ def playGame():
 
     if s == s[::-1]:
         print("Yes")
+        score += 1
     else:
         print("No")
 
@@ -35,13 +36,17 @@ def handleUserInput(userInput):
             printLeaderboard()
         case "3":
             endLoop()
+            print("Thanks for playing!, score: " + str(score))
         case _:
             print("Invalid Input, Please Try Again")
 
-def getUserInput():
-    printMenu()
-    userInput = input("Make A Selection: ") 
-    handleUserInput(userInput)
+game = True
+score = 0
+
+while game:
+    def getUserInput():
+        printMenu()
+        userInput = input("Make A Selection: ") 
+        handleUserInput(userInput)
 
 getUserInput()
-
