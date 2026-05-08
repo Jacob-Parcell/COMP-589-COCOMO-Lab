@@ -20,3 +20,15 @@ def printMenu():
     print("1. Play")
     print("2. See Leaderboard")
     print("3. Exit")
+
+def handleUserInput(userInput):
+    match userInput:
+
+        case 1:
+            playGame()
+        case 2:
+            printLeaderboard()
+        case 3:
+            endLoop()
+        case _:
+            print("Invalid Input, Please Try Again")
