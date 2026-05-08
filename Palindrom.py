@@ -17,11 +17,11 @@ def printMenu():
 
 def handleUserInput(userInput):
     match userInput:
-        case 1:
+        case "1":
             playGame()
-        case 2:
+        case "2":
             printLeaderboard()
-        case 3:
+        case "3":
             endLoop()
         case _:
             print("Invalid Input, Please Try Again")
