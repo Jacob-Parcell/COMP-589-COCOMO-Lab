@@ -1,27 +1,22 @@
-def playGame():
-    s = input("Enter a palindrome: ") 
+score = 0
+game = True
+
+while game:
+    s = input("Enter a palindrome : ") 
     i, j = 0, len(s) - 1  
     is_palindrome = True  
 
-    if s == s[::-1]:
-        print("Yes")
+    while i < j:
+        if s[i] != s[j]:  
+            is_palindrome = False
+            break
+        i += 1
+        j -= 1
+
+    if is_palindrome:
+        print("Yes") 
+        score += 1
     else:
         print("No")
-
-
-def printMenu():
-    print("Welcome to Palindrome")
-    print("1. Play")
-    print("2. See Leaderboard")
-    print("3. Exit")
-
-def handleUserInput(userInput):
-    match userInput:
-        case 1:
-            playGame()
-        case 2:
-            printLeaderboard()
-        case 3:
-            endLoop()
-        case _:
-            print("Invalid Input, Please Try Again")
+        game = False
+        print("Game Over! Your score is:", score)
