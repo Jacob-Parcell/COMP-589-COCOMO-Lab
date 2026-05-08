@@ -35,21 +35,22 @@ def handleUserInput(userInput):
     match userInput:
         case "1":
             playGame(score)
+            return True
         case "2":
             printLeaderboard()
+            return True
         case "3":
-            return False
             print("Thanks for playing!, score: " + str(score))
+            return False
         case _:
             print("Invalid Input, Please Try Again")
+            return True
         
-    return True
-
 
 def getUserInput():
     printMenu()
     userInput = input("Make A Selection: ") 
-    handleUserInput(userInput)
+    return handleUserInput(userInput)
 
 while game:
     game = getUserInput()
