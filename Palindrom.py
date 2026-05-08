@@ -6,11 +6,14 @@ leaderboard = {
     "Reza" : 23
 }
 
+game = True
+score = 0
+
 def printLeaderboard():
     for key, value in sorted(leaderboard.items(), key=lambda item: item[1], reverse=True):
         print(f"{key}: {value}")
 
-def playGame():
+def playGame(score):
     s = input("Enter a palindrome: ") 
     i, j = 0, len(s) - 1  
     is_palindrome = True  
@@ -31,24 +34,24 @@ def printMenu():
 def handleUserInput(userInput):
     match userInput:
         case "1":
-            playGame()
+            playGame(score)
         case "2":
             printLeaderboard()
         case "3":
-            endLoop()
+            return False
             print("Thanks for playing!, score: " + str(score))
         case _:
             print("Invalid Input, Please Try Again")
+        
+    return false
 
-game = True
-score = 0
 
 def getUserInput():
     printMenu()
     userInput = input("Make A Selection: ") 
     handleUserInput(userInput)
-    
+
 while game:
-    getUserInput()
+    game = getUserInput()
 
 
