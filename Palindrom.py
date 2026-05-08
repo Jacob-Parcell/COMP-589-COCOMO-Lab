@@ -21,6 +21,7 @@ def playGame(score):
     if s == s[::-1]:
         print("Yes")
         score += 1
+        globals()['score'] = score
     else:
         print("No")
 
