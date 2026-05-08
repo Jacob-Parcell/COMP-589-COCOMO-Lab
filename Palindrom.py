@@ -30,3 +30,5 @@ def getUserInput():
     printMenu()
     userInput = input("Make A Selection: ") 
     handleUserInput(userInput)
+
+getUserInput()
