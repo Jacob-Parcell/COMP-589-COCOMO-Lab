@@ -45,7 +45,7 @@ def handleUserInput(userInput):
         case _:
             print("Invalid Input, Please Try Again")
         
-    return false
+    return True
 
 
 def getUserInput():
