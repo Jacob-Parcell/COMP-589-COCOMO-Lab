@@ -1,3 +1,6 @@
+game = True
+score = 0
+
 def playGame():
     s = input("Enter a palindrome: ") 
     i, j = 0, len(s) - 1  
@@ -28,11 +31,8 @@ def handleUserInput(userInput):
         case _:
             print("Invalid Input, Please Try Again")
 
-game = True
-score = 0
-
-while game:
-    def getUserInput():
+def getUserInput():
+    while game:
         printMenu()
         userInput = input("Make A Selection: ") 
         handleUserInput(userInput)
