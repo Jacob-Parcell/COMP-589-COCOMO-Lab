@@ -1,5 +1,16 @@
 game = True
 score = 0
+leaderboard = {
+    "Jason" : 1,
+    "Jacob" : 5,
+    "Nicholas" : 15,
+    "Russell" : 50,
+    "Reza" : 23
+}
+
+def printLeaderboard():
+    for key, value in sorted(leaderboard.items(), key=lambda item: item[1], reverse=True):
+        print(f"{key}: {value}")
 
 def playGame():
     s = input("Enter a palindrome: ") 
