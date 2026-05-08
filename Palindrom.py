@@ -25,3 +25,8 @@ def handleUserInput(userInput):
             endLoop()
         case _:
             print("Invalid Input, Please Try Again")
+
+def getUserInput():
+    printMenu()
+    userInput = input("Make A Selection: ") 
+    handleUserInput(userInput)
